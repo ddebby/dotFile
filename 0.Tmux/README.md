@@ -84,3 +84,11 @@ Other shortcuts works the same way as default shortcuts does
 **Well-designed shortcuts**
 
 *Tmux shortcuts are now easier to access, and better for you to remember*
+
+设置tmux的默认shell为zsh
+1. 在~/.tmux.conf文件中添加
+
+“set -g default-shell /bin/zsh”
+
+2. 重新刷新tmux的配置文件
+tmux source-file ~/.tmux.conf
