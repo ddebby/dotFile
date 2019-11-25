@@ -2,9 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-#Set name of the theme to load --- if set to "random", it will
+export ZSH="/home/gaoc/.oh-my-zsh"
+export PATH=/anaconda/bin:$PATH
+# Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -105,20 +105,6 @@ alias vi='vim'
 alias grep='grep --color=auto'
 alias gz='tar -xzvf'
 alias tgz='tar -zvcf'
-alias nb='cd /home/inesa/data/notebooks'
+alias nb='cd /home/gaoc/data'
 
-# Add by anaconda
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/root/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-      \eval "$__conda_setup"
-    else
-          if [ -f "/root/anaconda3/etc/profile.d/conda.sh" ]; then
-                    . "/root/anaconda3/etc/profile.d/conda.sh"
-                            CONDA_CHANGEPS1=false conda activate base
-                                else
-                                          \export PATH="/root/anaconda3/bin:$PATH"
-                                              fi
-fi
-unset __conda_setup
 # <<< conda init <<<
-
