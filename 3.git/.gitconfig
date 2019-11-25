@@ -1,0 +1,21 @@
+[user]
+	name = Ebby
+	email = ebby.dd@gmail.com
+[color]
+	ui = true
+[core]
+	editor = vim
+[push]
+	default = simple
+[alias]
+	co = checkout
+	ci = commit
+	ss = status
+	br = branch
+	cv = commit -v
+	dc = diff --cached
+	d = diff
+	pr = pull --rebase
+	ps = push
+	l = log --graph --pretty=format:'%C(yellow)%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --all
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
