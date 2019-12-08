@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/gaoc/.oh-my-zsh"
+export ZSH="/home/inesa-gao/.oh-my-zsh"
 export PATH=/anaconda/bin:$PATH
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,6 +105,42 @@ alias vi='vim'
 alias grep='grep --color=auto'
 alias gz='tar -xzvf'
 alias tgz='tar -zvcf'
-alias nb='cd /home/gaoc/data'
+alias nb='cd /home/inesa-gao/gaoc/notebooks'
+alias ws='cd /home/inesa-gao/gaoc'
+alias fastai='source /home/inesa-gao/gaoc/venv/fastai/bin/activate'
+alias tf2='source /home/inesa-gao/gaoc/venv/tf_2.0.0/bin/activate'
+alias torch='source /home/inesa-gao/gaoc/venv/pytorch/bin/activate'
 
-# <<< conda init <<<
+export PATH=$PATH:/usr/local/cuda-10.0/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64
+export CUDA_HOME=/usr/local/cuda
+
+export PATH=$PATH:/home/inesa-gao/.local/bin
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/inesa-gao/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/inesa-gao/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/inesa-gao/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/inesa-gao/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+export NVM_DIR="/home/inesa-gao/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# ctags
+set tags=~/fasttags
+
+# For vim color in tmux error
+if [[ $TERM == xterm ]]; then
+      TERM=xterm-256color
+    fi
