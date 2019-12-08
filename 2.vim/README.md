@@ -1,11 +1,17 @@
 
 ## SpaceVIM
+1. 
 curl -sLf https://spacevim.org/install.sh | bash
 
 To add Python language support in SpaceVim, you need to enable the lang#python layer. Press SPC f v d to open SpaceVim configuration file, and add the following snippet to your configuration:
 
 [[layers]]
   name = "lang#python"
+
+2. 回退会原始VIM配置：
+curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall 
+
+
 
 ## You Complete Me
 
