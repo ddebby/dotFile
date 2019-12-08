@@ -62,3 +62,16 @@ autoload -U promptinit && promptinit
 prompt pure
 ```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+### 隐藏主机名
+配置文件 `~/.oh-my-zsh/themes/xxx`
+或者直接在`~/.zshrc`文件中添加：
+```bash
+
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
+```
+
