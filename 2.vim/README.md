@@ -1,29 +1,86 @@
+# SpaceVim使用手册
 
-## SpaceVIM
-1. 
-curl -sLf https://spacevim.org/install.sh | bash
+> 中文手册： <https://spacevim.org/cn/documentation/>
 
-To add Python language support in SpaceVim, you need to enable the lang#python layer. Press SPC f v d to open SpaceVim configuration file, and add the following snippet to your configuration:
+## 1. Install
+
+`curl -sLf <https://spacevim.org/install.sh> | bash`
+
+卸载并回滚原vim
+
+`curl -sLf <https://spacevim.org/install.sh> | bash -s -- --uninstall`
+
+
+
+## 2. 快捷键
+
+SpaceVim中的快捷键都容易记忆：
+
+- 窗口（window）就是**w**，
+- 文件（file）就是**f**，
+- 缓冲区（buffer）就是**b**，
+- Tab管理就是**t**。
+
+1. `SPC + b +d` 关闭buffer
+2. `SPC + S + p` : 工程目录下检索；
+3. `SPC + c +l`: 快速注释当前行
+4. `SPC + l + r`: Language RUN
+
+
+
+## 3.配置
+
+配置文件位置： `~/.SpaceVim.d/init.toml`
+
+```bash
+[[layers]] 
+name = "lang#python"
 
 [[layers]]
-  name = "lang#python"
+name = "gtags"
+gtagslabel = "ctags"
 
-2. 回退会原始VIM配置：
-curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall 
-
-
-
-## You Complete Me
-
+[[custom_plugins]]
+name = "joshdick/onedark.vim"
 ```
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-# make sure in dir ~/.vim/bundle
-  cd ~/.vim/bundle
-# Download by git clone
-  git clone https://github.com/Valloric/YouCompleteMe.git
 
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --all
 
+以下是在 SpaceVim 中安装插件的方法 ↓
+
+```text
+[[custom_plugins]]
+    name = "xxx/xxx"
 ```
+
+
+
+## 4. 其它
+
+### 更新vim
+
+```bash
+sudo apt remove --purge vim vim-runtime vim-tiny vim-common vim-doc vim-scripts -y
+sudo add-apt-repository ppa:jonathonf/vim 
+sudo apt update 
+sudo apt-get -u dist-upgrade
+sudo apt install vim 
+```
+
+### 关于Ctags
+
+```bash
+sudo apt install ctags
+sudo apt install exuberant-ctags
+
+## 查看需要输出tags文件位置
+locate fastai|less
+
+## 3. 生成tags文件
+ctags -R -o ~/fasttags /home/shang/.conda/envs/pyfast/lib/python3.7/site-packages/fastai/
+
+## 4. 将tags文件记录到vim引导文件
+set tags=~/.tags/fasttags                                                                 
+set tags+=~/.tags/torchtags
+```
+
