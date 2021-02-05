@@ -70,7 +70,11 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,8 +112,12 @@ alias tgz='tar -zvcf'
 alias nb='cd /home/inesa-gao/gaoc/notebooks'
 alias ws='cd /home/inesa-gao/gaoc'
 alias fastai='source /home/inesa-gao/gaoc/venv/fastai/bin/activate'
-alias tf2='source /home/inesa-gao/gaoc/venv/tf_2.0.0/bin/activate'
+alias tf2='source /home/inesa-gao/gaoc/venv/tf2/bin/activate'
 alias torch='source /home/inesa-gao/gaoc/venv/pytorch/bin/activate'
+alias data='cd /home/inesa-gao/gaoc/0.data'
+alias paddle='source /home/inesa-gao/gaoc/venv/paddlepaddle/bin/activate'
+
+
 
 export PATH=$PATH:/usr/local/cuda-10.0/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64
@@ -133,14 +141,23 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
 export NVM_DIR="/home/inesa-gao/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # ctags
 set tags=~/fasttags
+set tags+=~/.tags/fast2tags
+# z history
+source /usr/local/lib/z.sh
 
 # For vim color in tmux error
 if [[ $TERM == xterm ]]; then
       TERM=xterm-256color
     fi
+
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+export PKG_CONFIG_PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=magenta,underline"
