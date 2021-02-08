@@ -2,53 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/inesa-gao/.oh-my-zsh"
 export PATH=/anaconda/bin:$PATH
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="agnoster"
-#ZSH_THEME="ys"
-#ZSH_THEME="robbyrussell"
 
-plugins=(
-  git
-  zsh-autosuggestions
-  #zsh-syntax-highlighting
-  z
-  colored-man-pages
-  #zsh-dircolors-solarized
-  )
-
-
-source $ZSH/oh-my-zsh.sh
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias ls='ls --color=auto'
 alias ll='ls -l'
 alias vi='vim'
 alias grep='grep --color=auto'
@@ -67,11 +23,11 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
-#source ~/.shell/functions.sh
+source ~/.shell/functions.sh
 source ~/.zsh/plugins_before.zsh 
 source ~/.zsh/settings.zsh
-#source ~/.shell/bootstrap.sh
-#source ~/.shell/external.sh
+source ~/.shell/bootstrap.sh
+source ~/.shell/external.sh
 
 #source ~/.shell/aliases.sh
 source ~/.zsh/prompt.zsh
@@ -132,3 +88,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=yellow,underline"
 #ZSH_HIGHLIGHT_STYLES[builtin]=fg=blue,bold
 #ZSH_HIGHLIGHT_STYLES[function]=fg=blue,bold
 #ZSH_HIGHLIGHT_STYLES[command]=fg=yellow,bold
+
