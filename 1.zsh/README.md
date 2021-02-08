@@ -63,6 +63,56 @@ prompt pure
 ```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+
+### 插件
+```
+# ~/.zshrc:
+plugins=(
+  git
+  extract
+  autojump
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+```
+#### git
+
+自带插件，可以使用缩写命令, 比如 `gaa` -> `git add --all`, 通过`alias | grep git`查看所有支持缩写命令
+
+激活: 添加到`~/.zshrc`的plugins列表
+
+#### extract
+
+自带插件，不用再使用复杂的`tar`来解压压缩包了
+
+激活: 添加 `extract` 到 `~/.zshrc` 的plugins列表
+
+#### autojump
+
+使用`j`命令直接快速进入某个目录, 比如 `j Downloads` -> `cd ~/Downloads`
+
+安装: `brew install autojump`
+
+激活: 添加 `autojump` 至 `~/.zshrc` 配置文件的插件列表。
+
+#### zsh-syntax-highlighting
+
+命令高亮插件，命令不再只是同一个颜色了
+
+安装: `brew install zsh-syntax-highlighting`
+
+激活: 添加 `zsh-syntax-highlighting` 至 `~/.zshrc` 配置文件的插件列表。
+
+#### zsh-autosuggestions
+输入时按右方向键→自动补全命令
+
+安装: `brew install zsh-autosuggestions`
+
+激活: 添加 `zsh-autosuggestions` 至 `~/.zshrc` 配置文件的插件列表。
+
+
+
+
 ### 隐藏主机名
 配置文件 `~/.oh-my-zsh/themes/xxx`
 或者直接在`~/.zshrc`文件中添加：
