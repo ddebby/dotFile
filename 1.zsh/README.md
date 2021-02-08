@@ -111,7 +111,7 @@ plugins=(
 激活: 添加 `zsh-autosuggestions` 至 `~/.zshrc` 配置文件的插件列表。
 
 
-
+## Tips
 
 ### 隐藏主机名
 配置文件 `~/.oh-my-zsh/themes/xxx`
@@ -124,4 +124,7 @@ prompt_context() {
   fi
 }
 ```
+### source zhsrc
+在`/etc/zsh/zprofile` 中添加：
 
+`source ~/.zshrc`
