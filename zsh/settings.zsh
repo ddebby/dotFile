@@ -45,5 +45,6 @@ bindkey '^H' backward-delete-char
 # Use incremental search
 bindkey "^R" history-incremental-search-backward
 
+bindkey "^A" vi-beginning-of-line
 # Disable shell builtins
 disable r
