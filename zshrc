@@ -1,21 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-#TODO: Move this to alias files 
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias vi='vim'
-alias grep='grep --color=auto'
-alias gz='tar -xzvf'
-alias tgz='tar -zvcf'
-alias nb='cd /home/inesa-gao/gaoc/notebooks'
-alias ws='cd /home/inesa-gao/gaoc'
-alias fastai='source /home/inesa-gao/gaoc/venv/fastai/bin/activate'
-alias tf2='source /home/inesa-gao/gaoc/venv/tf2/bin/activate'
-alias torch='source /home/inesa-gao/gaoc/venv/pytorch/bin/activate'
-alias data='cd /home/inesa-gao/gaoc/0.data'
-alias paddle='source /home/inesa-gao/gaoc/venv/paddlepaddle/bin/activate'
-
 # Test if ~/.aliases exists and source it
 if [ -f ~/.aliases ]; then
     source ~/.aliases
@@ -43,7 +28,8 @@ prompt_context() {
 set tags=~/fasttags
 set tags+=~/.tags/fast2tags
 # z history
-[ -f /usr/local/lib/z.sh ] && source /usr/local/lib/z.sh
+source ~/.zsh/plugins/zsh-z.plugin.zsh
+#[ -f /usr/local/lib/z.sh ] && source /usr/local/lib/z.sh
 
 # For vim color in tmux error
 if [[ $TERM == xterm ]]; then
