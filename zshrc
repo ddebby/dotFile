@@ -39,7 +39,9 @@ if [[ $TERM == xterm ]]; then
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 export PKG_CONFIG_PATH
 
+## Config for fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_COMPLETION_TRIGGER='\'
 #source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=yellow,underline"
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=magenta,underline"
