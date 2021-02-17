@@ -16,3 +16,5 @@
 - shell:
   #- [chsh -s $(which zsh), Making zsh the default shell]
   - [git submodule update --init --recursive, Installing submodules]
+  - [conda install -c conda-forge fzf, Install fzf]
+  - [sudo apt-get install zsh]
