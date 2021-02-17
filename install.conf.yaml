@@ -6,6 +6,7 @@
 
 - link:
     ~/.bashrc: bashrc
+    ~/.aliases: aliases
     ~/.zshrc: zshrc
     ~/.zsh: zsh
     ~/.vimrc: vimrc
