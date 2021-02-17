@@ -23,11 +23,11 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
-source ~/.shell/functions.sh
+#source ~/.shell/functions.sh
 source ~/.zsh/plugins_before.zsh 
 source ~/.zsh/settings.zsh
-source ~/.shell/bootstrap.sh
-source ~/.shell/external.sh
+#source ~/.shell/bootstrap.sh
+#source ~/.shell/external.sh
 
 #source ~/.shell/aliases.sh
 source ~/.zsh/prompt.zsh
