@@ -12,10 +12,10 @@
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: gitconfig
+    ~/.pip: pip 
 
 - shell:
-  #- [chsh -s $(which zsh), Making zsh the default shell]
   - [git submodule update --init --recursive, Installing submodules]
   - [conda install -c conda-forge fzf, Install fzf]
   - [sudo apt-get install zsh]
-  - [sudo chsh -s /bin/zsh root]
+  - [chsh -s $(which zsh), Making zsh the default shell]
