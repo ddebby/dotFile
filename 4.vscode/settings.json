@@ -1,5 +1,23 @@
 {
-// vim
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+  "editor.inlineSuggest.enabled": true,
+  "python.defaultInterpreterPath": "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9",
+  "editor.minimap.enabled": false,
+  "github.copilot.enable": {
+      "*": false,
+      "yaml": false,
+      "plaintext": false,
+      "markdown": false
+  },
+  "python.languageServer": "Pylance",
+  "tabnine.experimentalAutoImports": true,
+  "hediet.vscode-drawio.theme": "automatic",
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.zoomLevel": 2,
+  "[python]": {
+      "editor.formatOnType": true
+  },
+  // vim
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useCtrlKeys": true,
@@ -40,9 +58,17 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
       {
+        "before": ["<leader>", "o"],
+        "commands": ["workbench.action.toggleAuxiliaryBar"],
+      },
+      {
         "before": ["<leader>", "e"],
         "commands": ["workbench.view.explorer"],
         "when": "view.Container.workbench.view.explorer.enabled"
+      },
+      {
+        "before": ["<leader>", "p"],
+        "commands": ["workbench.action.quickOpen"]
       },
       {
         "before": ["<leader>", "s"],
@@ -61,6 +87,14 @@
         "commands": [":nohl"]
       },
       {
+        "before": ["j"],
+        "after": ["g", "j"]
+      },
+      {
+        "before": ["k"],
+        "after": ["g", "k"]
+      },
+      {
         "before": ["J"],
         "after": ["8", "g", "j", "z", "z"],
       },
@@ -69,17 +103,6 @@
         "after": ["8", "g", "k", "z", "z"],
       }
     ],
-  "vim.sneak": true,
-  "vim.useSystemClipboard": true,
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-      "<C-a>": false,
-      "<C-f>": false,
-      "<C-n>": false,
-      "<C-`>": false,
-      "<C-w>": false
-
-  },
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["j"],
@@ -112,4 +135,22 @@
           ]
       },
   ],
+  "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false,
+      "<C-n>": false,
+      "<C-`>": false,
+      "<C-w>": false
+  },
+  // Others
+  "gitlens.mode.active": "zen",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
+  },
+  "workbench.iconTheme": "material-icon-theme"
 }

@@ -47,4 +47,85 @@
     "command": "deleteFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },  
+  // 切换窗口的操作
+  { // window move down
+  "key": "ctrl+j",
+  "command": "vim.remap",
+  "when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen",
+  "args": {
+    "after": [
+      "<c-w>",
+      "j"
+    ],
+  }
+},
+{ // window move up
+  "key": "ctrl+k",
+  "command": "vim.remap",
+  "when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen && !panelFocus",
+  "args": {
+    "after": [
+      "<c-w>",
+      "k"
+    ],
+  }
+},
+{ // window move left
+  "key": "ctrl+h",
+  "command": "vim.remap",
+  "when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen && !panelFocus",
+  "args": {
+    "after": [
+      "<c-w>",
+      "h"
+    ],
+  }
+},
+{ // window move right
+  "key": "ctrl+l",
+  "command": "vim.remap",
+  "when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen",
+  "args": {
+    "after": [
+      "<c-w>",
+      "l"
+    ],
+  }
+},
+{ // open selected explorer item 
+  "key": "enter",
+  "command": "list.select",
+  "when": "explorerViewletVisible && filesExplorerFocus"
+},
+{ // toggle terminal
+  "key": "ctrl+\\",
+  "command": "workbench.action.terminal.toggleTerminal",
+  "when": "terminal.active"
+},
+{ // maxmize terminal
+  "key": "ctrl+m",
+  "command": "workbench.action.toggleMaximizedPanel",
+  "when": "terminalFocus"
+},
+// cursorMove in editor mode
+{
+  "key": "ctrl+h",
+  "command": "extension.vim_left",
+  "when": "editorTextFocus && vim.active && !inDebugRepl"
+},
+{
+  "key": "ctrl+l",
+  "command": "extension.vim_right",
+  "when": "editorTextFocus && vim.active && !inDebugRepl"
+},
+{
+  "key": "ctrl+d",
+  "command": "extension.vim_ctrl+h",
+  "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
+},
+{
+  "key": "ctrl+h",
+  "command": "-extension.vim_ctrl+h",
+  "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
+},
 ]
