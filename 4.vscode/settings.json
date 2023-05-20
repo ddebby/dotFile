@@ -1,132 +1,115 @@
 {
-    "workbench.colorTheme": "One Dark Pro",
-    "editor.inlineSuggest.enabled": true,
-    "editor.minimap.enabled": false,
-    "python.languageServer": "Pylance",
-    "hediet.vscode-drawio.theme": "automatic",
-    "security.workspace.trust.untrustedFiles": "open",
-    "window.zoomLevel": 2,
-    "[python]": {
-        "editor.formatOnType": true
+// vim
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "editor.lineNumbers":"relative",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
     },
-    // vim
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "editor.lineNumbers":"relative",
-    "vim.insertModeKeyBindings": [
+
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
       {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
+          "before": ["<leader>", "q"],
+          "after": ["%"]
+      },
+      {
+          "before": ["<leader>", "m"],
+          "commands": [
+              "bookmarks.toggle"
+          ]
+      },
+      {
+          "before": ["<leader>", "b"],
+          "commands": [
+              "bookmarks.list"
+          ]
+      }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "e"],
+        "commands": ["workbench.view.explorer"],
+        "when": "view.Container.workbench.view.explorer.enabled"
+      },
+      {
+        "before": ["<leader>", "s"],
+        "commands": ["workbench.action.gotoSymbol"]
+      },
+      {
+        "before": ["<leader>", "j"],
+        "after": ["J"]
+      },
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      {
+        "before": ["<leader>", "/"],
+        "commands": [":nohl"]
+      },
+      {
+        "before": ["J"],
+        "after": ["8", "g", "j", "z", "z"],
+      },
+      {
+        "before": ["K"],
+        "after": ["8", "g", "k", "z", "z"],
       }
     ],
-    "vim.normalModeKeyBindings": [
-      {
-        "before": ["L"],
-        "after": ["g", "_"]
-      },
+  "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false,
+      "<C-n>": false,
+      "<C-`>": false,
+      "<C-w>": false
 
-      {
-        "before": ["H"],
-        "after": ["^"]
-      },
-        {
-            "before": ["<leader>", "q"],
-            "after": ["%"]
-        },
-        {
-            "before": ["<leader>", "m"],
-            "commands": [
-                "bookmarks.toggle"
-            ]
-        },
-        {
-            "before": ["<leader>", "b"],
-            "commands": [
-                "bookmarks.list"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-          "before": ["<leader>", "e"],
-          "commands": ["workbench.view.explorer"],
-          "when": "view.Container.workbench.view.explorer.enabled"
-        },
-        {
-          "before": ["<leader>", "s"],
-          "commands": ["workbench.action.gotoSymbol"]
-        },
-        {
-          "before": ["<leader>", "j"],
-          "after": ["J"]
-        },
-        {
-          "before": ["<leader>", "d"],
-          "after": ["d", "d"]
-        },
-        {
-          "before": ["<leader>", "/"],
-          "commands": [":nohl"]
-        },
-        {
-          "before": ["J"],
-          "after": ["8", "g", "j", "z", "z"],
-        },
-        {
-          "before": ["K"],
-          "after": ["8", "g", "k", "z", "z"],
-        }
-      ],
-    "vim.sneak": true,
-    "vim.useSystemClipboard": true,
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false,
-        "<C-n>": false,
-        "<C-`>": false,
-        "<C-w>": false
-
+  },
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
     },
-    "vim.visualModeKeyBindingsNonRecursive": [
-      {
-        "before": ["j"],
-        "after": ["g", "j"]
-      },
-      {
-        "before": ["k"],
-        "after": ["g", "k"]
-      },
-      {
-        "before": ["p"],
-        "after": ["p", "g", "v", "y"]
-      },
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-    ],
-    "gitlens.mode.active": "zen",
-    "workbench.colorCustomizations": {
-      "statusBar.background": "#005f5f",
-      "statusBar.noFolderBackground": "#005f5f",
-      "statusBar.debuggingBackground": "#005f5f"
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
     },
-    "workbench.iconTheme": "vscode-icons"
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+      {
+          "before": [
+              ">"
+          ],
+          "commands": [
+              "editor.action.indentLines"
+          ]
+      },
+      {
+          "before": [
+              "<"
+          ],
+          "commands": [
+              "editor.action.outdentLines"
+          ]
+      },
+  ],
 }

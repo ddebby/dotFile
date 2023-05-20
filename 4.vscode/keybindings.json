@@ -1,50 +1,50 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "tab",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetVisible"
-    },
-    {
-      "key": "ctrl+tab",
-      "command": "selectPrevSuggestion",
-      "when": "suggestWidgetVisible"
-    },{
+  {
       "key": "tab",
-      "command": "workbench.action.quickOpenSelectNext",
-      "when": "inQuickOpen"
-    },
-    {
-      "key": "ctrl+tab",
-      "command": "workbench.action.quickOpenSelectPrevious",
-      "when": "inQuickOpen"
-    },
-    // 文件浏览区的操作
-    {
-      "key": "/",
-      "command": "list.find",
-      "when": "listFocus && listSupportsFind && !inputFocus"
-    },
-    // 新建文件/文件夹
-    {
-      "key": "a",
-      "command": "explorer.newFile",
-      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-      "key": "shift+a",
-      "command": "explorer.newFolder",
-      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    // 重命名/删除
-    {
-      "key": "r",
-      "command": "renameFile",
-      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-      "key": "d",
-      "command": "deleteFile",
-      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-    },  
+      "command": "selectNextSuggestion",
+      "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
+  },{
+    "key": "tab",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  // 文件浏览区的操作
+  {
+    "key": "/",
+    "command": "list.find",
+    "when": "listFocus && listSupportsFind && !inputFocus"
+  },
+  // 新建文件/文件夹
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 重命名/删除
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },  
 ]
