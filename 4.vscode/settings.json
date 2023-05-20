@@ -3,12 +3,6 @@
   "editor.inlineSuggest.enabled": true,
   "python.defaultInterpreterPath": "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9",
   "editor.minimap.enabled": false,
-  "github.copilot.enable": {
-      "*": false,
-      "yaml": false,
-      "plaintext": false,
-      "markdown": false
-  },
   "python.languageServer": "Pylance",
   "tabnine.experimentalAutoImports": true,
   "hediet.vscode-drawio.theme": "automatic",
@@ -30,6 +24,10 @@
     }
   ],
   "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
     {
       "before": ["L"],
       "after": ["g", "_"]
@@ -54,12 +52,42 @@
           "commands": [
               "bookmarks.list"
           ]
+      },
+      // run python code
+      {
+        "before": [
+          "leader",
+          "p",
+          "y"
+        ],
+        "commands": [
+          "workbench.action.files.saveAll",
+          {
+            "command": "workbench.action.terminal.sendSequence",
+            "args": {
+              "text": "clear \u000D"
+            }
+          },
+          "workbench.action.terminal.focus",
+          {
+            "command": "workbench.action.terminal.sendSequence",
+            "args": {
+              "text": "python '${file}'\u000D"
+            }
+          },
+          "workbench.action.focusActiveEditorGroup"
+        ]
       }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
       {
         "before": ["<leader>", "o"],
         "commands": ["workbench.action.toggleAuxiliaryBar"],
+      },
+      {
+        "before": ["<leader>", "o", "o"],
+        "commands": ["outline.focus"],
+        "when": ["outline.enable"]
       },
       {
         "before": ["<leader>", "e"],
@@ -77,10 +105,6 @@
       {
         "before": ["<leader>", "j"],
         "after": ["J"]
-      },
-      {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
       },
       {
         "before": ["<leader>", "/"],
@@ -101,7 +125,29 @@
       {
         "before": ["K"],
         "after": ["8", "g", "k", "z", "z"],
-      }
+      },
+      // -- run
+      {
+        "before": [
+          "<leader>",
+          "r"
+        ],
+        "commands": [
+          "workbench.action.files.save",
+          "workbench.action.debug.run"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "d",
+          "r"
+        ],
+        "commands": [
+          "workbench.action.files.save",
+          "workbench.action.debug.start"
+        ]
+      },
     ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {

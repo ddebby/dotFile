@@ -1,25 +1,25 @@
 // Place your key bindings in this file to override the defaults
 [
   {
-      "key": "tab",
-      "command": "selectNextSuggestion",
-      "when": "suggestWidgetVisible"
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "vim.active && suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+tab",
+    "key": "ctrl+k",
     "command": "selectPrevSuggestion",
-    "when": "suggestWidgetVisible"
-  },{
-    "key": "tab",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
+    "when": "vim.active && suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+tab",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "vim.active && inQuickOpen"
   },
-  // 文件浏览区的操作
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "vim.active && inQuickOpen"
+  },
   {
     "key": "/",
     "command": "list.find",
@@ -111,21 +111,25 @@
 {
   "key": "ctrl+h",
   "command": "extension.vim_left",
-  "when": "editorTextFocus && vim.active && !inDebugRepl"
+  "when": "vim.mode == 'Insert' && editorTextFocus && vim.active && !inDebugRepl"
 },
 {
   "key": "ctrl+l",
   "command": "extension.vim_right",
-  "when": "editorTextFocus && vim.active && !inDebugRepl"
+  "when": "vim.mode == 'Insert' && editorTextFocus && vim.active && !inDebugRepl"
 },
 {
   "key": "ctrl+d",
   "command": "extension.vim_ctrl+h",
-  "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
+  "when": "vim.mode == 'Insert' && editorTextFocus && vim.active && !inDebugRepl"
 },
 {
   "key": "ctrl+h",
   "command": "-extension.vim_ctrl+h",
   "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
+},
+{
+  "key": "cmd+m",
+  "command": "outline.focus"
 },
 ]
